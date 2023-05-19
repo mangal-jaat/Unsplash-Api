@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="ayncAwait.css">
+    <title>Document</title>
+    <!-- Boxiocns CDN Link -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="unsplash-main-warpper">
+<!-- Start Search Wrapper -->
+<div class="search-wrapper">
+    <div class="search-inner">
+        <h1 class="search-title">Image Gallery with JavaScript</h1>
+        <small class="search-info">Search and download any images within a second</small>
+        <div class="search-filter">
+            <small>Chosse a option and filter Result</small>
+            <div class="filte-wrapper">
+                   <select id="order" onchange="handleSelectChange(e)">
+                    <option value="latest">latest</option>
+                    <option value="oldest">oldest</option>
+                    <option value="popular" selected>popular</option>
+                   </select>
+           
+                   <select id="orientation" onchange="handleSelectChange(e)">
+                    <option value="landscape">landscape</option>
+                    <option value="squarish">squarish</option>
+                    <option value="portrait" selected>portrait</option>
+                   </select>
+               </div> 
+        </div>
+        <form class="search-form">
+            <i class="uil uil-search search-icon"></i>
+            <input value="green" class="search-input" type="search" placeholder="Search images">
+            <button class="search-more">More</button>
+        </form>
+    </div>
+</div>
+<!-- Img LightBox Wrapper -->
+
+ <!-- Result Gallary Wrapper -->
+ <div class="gallery-wrapper result-warpper">
+    <ul class="result-list"></ul>
+    <div class="spinner js-spinner hidden">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    <div class="pagination-container">
+        <button id="next">Next</button>   
+        <button id="prev">Prev</button>     
+    </div>
+</div>
+ <!-- End Gallary Wrapper -->
+
+
+ <!-- Img LightBox Wrapper -->
+ <div class="lightbox-wrapper" onclick="hideLightbox()">
+    <div class="lightbox-inner">
+        <header class="lightbox-header">
+            <div class="author">
+                By <a href="" class="author-name"></a>
+            </div>
+            <div class="lightbox-buttons">
+                <a href="" class="uil uil-import download-link"></a>
+                <i class="close-icon uil uil-times icon" onclick="hideLightbox()"></i>
+            </div>
+        </header>
+        <div class="lightbox-preview-img">
+            <div class="img"><img src="" alt="preview-img"></div>
+        </div>
+    </div>
+ <!-- Img LightBox Wrapper -->
+
+</div>
+<script src="ayncAwait.js"></script>
+</body>
+</html>
